@@ -1,7 +1,7 @@
 import { Center } from "@chakra-ui/react";
 import Image from "next/image";
 
-export function Footer() {
+export default function Footer() {
     return <Center
         as="footer"
         w="100%"

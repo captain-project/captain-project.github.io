@@ -1,6 +1,6 @@
 import { Box, Text, Tooltip } from '@chakra-ui/react';
 
-export function Card({ title, description, src, isActive, onClick, ...props }: any) {
+export default function Card({ title, description, src, isActive, onClick, ...props }: any) {
     return (
         <Tooltip
             hasArrow

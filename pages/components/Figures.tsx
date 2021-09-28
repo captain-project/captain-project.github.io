@@ -24,7 +24,7 @@ import {
     StopIcon,
     RefreshIcon,
 } from "@heroicons/react/solid";
-import { Card } from "./Card";
+import Card from "./Card";
 import metaData from "../../figure-metadata.json";
 
 const getImage = (frame: number, plot: number, format: string = "svg") =>
@@ -36,7 +36,7 @@ const MAX_FRAME = 31;
 const clamp = (value: number, min: number, max: number) =>
     Math.min(Math.max(value, min), max);
 
-export function Figures() {
+export default function Figures() {
     const [frame, setFrame] = useState(1);
     const [plot, setPlot] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);

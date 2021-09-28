@@ -13,9 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BookmarkIcon } from "@heroicons/react/solid";
-import { Header } from "./components/Header";
-import { Figures } from "./components/Figures";
-import { Footer } from "./components/Footer";
+import Header from "./components/Header";
+import Figures from "./components/Figures";
+import Footer from "./components/Footer";
 import frameworkImage from "../public/images/RL_framework_researchstat_thumb.png";
 
 export default function Home() {

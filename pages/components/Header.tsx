@@ -1,6 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 
-export function Header() {
+export default function Header() {
     return <Box
         as="header"
         style={{ cursor: "default" }}
