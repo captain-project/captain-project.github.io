@@ -175,7 +175,7 @@ export default function Home() {
             <HStack align="top" spacing={4}>
               <Icon as={BookmarkIcon} w={6} h={6} color="gray.400" mt={1} />
               <Text fontSize="sm">
-                Antonelli, A., Goria, S., Sterner, T., and Silvestro, D. (2021).
+                Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2021),
                 <br />
                 <strong>
                   Optimising biodiversity protection through artificial
@@ -183,10 +183,10 @@ export default function Home() {
                 </strong>
                 <br />
                 <Link
-                  href="https://www.biorxiv.org/content/10.1101/2021.04.13.439752v1.abstract"
+                  href="papers/Silvestro_et_al_Main_revised_incl_Methods.pdf"
                   isExternal
                 >
-                  bioRxiv <ExternalLinkIcon mx="2px" />
+                  PDF <ExternalLinkIcon mx="2px" mt="-2px" />
                 </Link>
               </Text>
             </HStack>
