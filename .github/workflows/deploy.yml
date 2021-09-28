@@ -43,3 +43,4 @@ jobs:
         with:
           build_dir: out
           jekyll: false
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
