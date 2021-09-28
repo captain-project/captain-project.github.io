@@ -103,7 +103,9 @@ export default function Home() {
             </Text>
           </VStack>
 
-          <NextImage src={frameworkImage} alt="aeou" layout="responsive" />
+          <Link href={frameworkImage.src} isExternal>
+            <NextImage src={frameworkImage} alt="aeou" layout="responsive" loading="eager" />
+          </Link>
         </Container>
 
         <Figures />
