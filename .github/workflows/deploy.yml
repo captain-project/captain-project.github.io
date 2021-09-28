@@ -43,3 +43,4 @@ jobs:
         with:
           publish_dir: out
           enable_jekyll: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
