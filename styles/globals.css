@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+blockquote::before {
+  font-family: Georgia, serif;
+  display: block;
+  content: "\201C";
+  font-size: 120px;
+  position: absolute;
+  left: -10px;
+  top: -30px;
+  color: var(--chakra-colors-gray-400);
+}
