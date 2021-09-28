@@ -21,6 +21,7 @@ export function Footer() {
                 alt="Antonelli Lab Logo"
                 width={320}
                 height={70}
+                loading="eager"
             />
         </a>
     </Center>

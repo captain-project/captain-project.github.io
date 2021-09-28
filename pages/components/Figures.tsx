@@ -64,7 +64,7 @@ export function Figures() {
     }, [isPlaying]);
 
     const onFrameChange = (value: number) => setFrame(value);
-    const onSelectPlot = (plotId: number) => setPlot(plotId);
+    const onPlotClick = (plotId: number) => setPlot(plotId);
 
     return (<>
         <SimpleGrid
@@ -158,7 +158,7 @@ export function Figures() {
                     description={metaData[plotId].description}
                     src={getImage(frame, plotId, "jpg")}
                     isActive={plot === plotId}
-                    onClick={() => onSelectPlot(plotId)}
+                    onClick={() => onPlotClick(plotId)}
                 />
             )}
         </SimpleGrid>
