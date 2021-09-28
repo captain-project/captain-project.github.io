@@ -1,5 +1,4 @@
-import { Center } from "@chakra-ui/react";
-import Image from "next/image";
+import { Center, Image } from "@chakra-ui/react";
 
 export default function Footer() {
     return <Center

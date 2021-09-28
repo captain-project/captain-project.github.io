@@ -1,12 +1,11 @@
 import Head from "next/head";
-import NextImage from "next/image";
-import styles from "../styles/Home.module.css";
 import {
   Container,
   Box,
   HStack,
   VStack,
   Heading,
+  Image,
   Link,
   Icon,
   Text,
@@ -16,11 +15,10 @@ import { BookmarkIcon } from "@heroicons/react/solid";
 import Header from "./components/Header";
 import Figures from "./components/Figures";
 import Footer from "./components/Footer";
-import frameworkImage from "../public/images/RL_framework_researchstat_thumb.png";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Captain</title>
         <meta name="description" content="" />
@@ -106,7 +104,7 @@ export default function Home() {
           </VStack>
 
           <Link href="/images/RL_framework_researchstat.png" isExternal>
-            <NextImage src={frameworkImage} alt="Framework" layout="responsive" loading="eager" />
+            <Image src="/images/RL_framework_researchstat_thumb.png" alt="Framework" loading="eager" />
           </Link>
         </Container>
 
