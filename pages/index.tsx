@@ -16,7 +16,7 @@ import { BookmarkIcon } from "@heroicons/react/solid";
 import { Header } from "./components/Header";
 import { Figures } from "./components/Figures";
 import { Footer } from "./components/Footer";
-import frameworkImage from "../public/images/RL_framework_researchstat.png";
+import frameworkImage from "../public/images/RL_framework_researchstat_thumb.png";
 
 export default function Home() {
   return (
@@ -105,8 +105,8 @@ export default function Home() {
             </Text>
           </VStack>
 
-          <Link href={frameworkImage.src} isExternal>
-            <NextImage src={frameworkImage} alt="aeou" layout="responsive" loading="eager" />
+          <Link href="/images/RL_framework_researchstat.png" isExternal>
+            <NextImage src={frameworkImage} alt="Framework" layout="responsive" loading="eager" />
           </Link>
         </Container>
 
