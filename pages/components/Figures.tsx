@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {
     Icon,
     SimpleGrid,
-    Image,
+    Image as ChakraImage,
     HStack,
     IconButton,
     ButtonGroup,
@@ -63,6 +63,18 @@ export function Figures() {
         };
     }, [isPlaying]);
 
+    useEffect(function preloadImages() {
+        for (let frame = 1; frame <= MAX_FRAME; ++frame) {
+            plotIds.forEach(plotId => {
+                const image = new Image();
+                image.src = getImage(frame, plotId, "jpg");
+                // @ts-ignore
+                window[image.src] = image;
+            });
+        }
+    }, []);
+
+
     const onFrameChange = (value: number) => setFrame(value);
     const onPlotClick = (plotId: number) => setPlot(plotId);
 
@@ -76,7 +88,7 @@ export function Figures() {
             maxWidth={1000}
         >
             <Box>
-                <Image htmlWidth={400} src={getImage(frame, plot)} />
+                <ChakraImage htmlWidth={400} src={getImage(frame, plot)} />
                 <HStack width={400} spacing="24px">
                     <ButtonGroup isAttached variant="outline">
                         <IconButton
@@ -151,9 +163,9 @@ export function Figures() {
             boxShadow="inner"
             rounded="md"
         >
-            {plotIds.map((plotId, key) =>
+            {plotIds.map((plotId) =>
                 <Card
-                    key={key}
+                    key={plotId}
                     title={metaData[plotId].title}
                     description={metaData[plotId].description}
                     src={getImage(frame, plotId, "jpg")}
