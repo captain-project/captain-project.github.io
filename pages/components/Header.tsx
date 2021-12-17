@@ -20,7 +20,7 @@ export default function Header() {
             </Heading>
         </Box>
         <Heading as="h4" size="sm" fontWeight="normal" color="gray.50" mb={2} ml={1}>
-            Conservation Area Prioritization Through AI Networks
+            Conservation Area Prioritization Through Artificial INtelligence
         </Heading>
     </Box>
 }
