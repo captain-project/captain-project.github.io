@@ -4,7 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../../styles/theme";
 import Layout from "../components/Layout";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Layout>
@@ -13,4 +13,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ChakraProvider>
   );
 }
-export default MyApp;

@@ -6,12 +6,13 @@ export default function Header() {
   return (
     <Flex
       as="header"
-      //bgGradient="linear(to-br, #184E68, #57CA85)"
-      bg="blue.700"
+      pos="fixed"
+      zIndex={9999}
+      bg="hsl(0 0% 0% / 0.7)"
       align="center"
-      p={6}
-      pr={12}
-      mb={20}
+      w="100%"
+      py={6}
+      px={[2, 6, 12, 20]}
     >
       <Box>
         <Link href="/">
@@ -49,7 +50,7 @@ export default function Header() {
           role="navigation"
           className={styles.navigation}
           display={{ base: "block", md: "flex" }}
-          gap={10}
+          gap={4}
         >
           <ListItem>
             <Link href="/">

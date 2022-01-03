@@ -15,7 +15,7 @@ import Figures from "../components/Figures";
 
 export default function Supplementary() {
   return (
-    <>
+    <Box as="main" pt="200">
       <Container mb={5}>
         <Heading as="h2" size="md" mb={4}>
           Supplementary information for
@@ -108,6 +108,6 @@ export default function Supplementary() {
       </Container>
 
       <Figures />
-    </>
+    </Box>
   );
 }
