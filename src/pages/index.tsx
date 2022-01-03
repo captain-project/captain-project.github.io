@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BookmarkIcon } from "@heroicons/react/solid";
-import Header from "./components/Header";
-import Figures from "./components/Figures";
+import Header from "../components/Header";
+import Figures from "../components/Figures";
 
 export default function Home() {
   return (
