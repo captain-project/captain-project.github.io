@@ -14,7 +14,6 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BookmarkIcon } from "@heroicons/react/solid";
 import Header from "./components/Header";
 import Figures from "./components/Figures";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -73,45 +72,54 @@ export default function Home() {
           </Heading>
           <VStack fontSize="md" pt={10} px={10} mb={10}>
             <Text>
-              Over a million species face extinction, carrying with them untold options for food
-              medicine, fibre, shelter, ecological resilience, aesthetic and cultural values. There is therefore
-              an urgent need to design conservation policies that maximise the protection of biodiversity and
-              its contributions to people, within the constraints of limited budgets.
+              Over a million species face extinction, carrying with them untold
+              options for food medicine, fibre, shelter, ecological resilience,
+              aesthetic and cultural values. There is therefore an urgent need
+              to design conservation policies that maximise the protection of
+              biodiversity and its contributions to people, within the
+              constraints of limited budgets.
             </Text>
             <Text>
-              Here we present a novel framework for spatial conservation prioritisation that combines simulation models,
-              reinforcement learning and ground validation to identify optimal policies. Our methodology,
-              CAPTAIN (Conservation Area Prioritisation Through Artificial Intelligence Networks),
-              quantifies the trade-off between the costs and benefits of area and biodiversity protection,
-              allowing the exploration of multiple biodiversity metrics.
+              Here we present a novel framework for spatial conservation
+              prioritisation that combines simulation models, reinforcement
+              learning and ground validation to identify optimal policies. Our
+              methodology, CAPTAIN (Conservation Area Prioritisation Through
+              Artificial Intelligence Networks), quantifies the trade-off
+              between the costs and benefits of area and biodiversity
+              protection, allowing the exploration of multiple biodiversity
+              metrics.
             </Text>
             <Text>
-              Under a fixed budget, our model
-              protects substantially more species from extinction than the random or naively targeted
-              protection of areas. CAPTAIN also outperforms the most widely used software for spatial
-              conservation prioritisation (Marxan) in 97% of cases and reduces species loss by an average of
-              40% under simulations, besides yielding prioritisation maps at substantially higher spatial
-              resolution using empirical data.
+              Under a fixed budget, our model protects substantially more
+              species from extinction than the random or naively targeted
+              protection of areas. CAPTAIN also outperforms the most widely used
+              software for spatial conservation prioritisation (Marxan) in 97%
+              of cases and reduces species loss by an average of 40% under
+              simulations, besides yielding prioritisation maps at substantially
+              higher spatial resolution using empirical data.
             </Text>
             <Text>
-              We find that regular biodiversity monitoring, even if simple
-              and with a degree of inaccuracy – characteristic of citizen science surveys – substantially
-              improves biodiversity outcomes. Given the complexity of people–nature interactions and
-              wealth of associated data, artificial intelligence holds great promise for improving the
-              conservation of biological and ecosystem values in a rapidly changing and resource-limited
-              world.
+              We find that regular biodiversity monitoring, even if simple and
+              with a degree of inaccuracy – characteristic of citizen science
+              surveys – substantially improves biodiversity outcomes. Given the
+              complexity of people–nature interactions and wealth of associated
+              data, artificial intelligence holds great promise for improving
+              the conservation of biological and ecosystem values in a rapidly
+              changing and resource-limited world.
             </Text>
           </VStack>
 
           <Link href="/images/RL_framework_researchstat.png" isExternal>
-            <Image src="/images/RL_framework_researchstat_thumb.png" alt="Framework" loading="eager" />
+            <Image
+              src="/images/RL_framework_researchstat_thumb.png"
+              alt="Framework"
+              loading="eager"
+            />
           </Link>
         </Container>
 
         <Figures />
       </Box>
-
-      <Footer />
     </div>
-  )
+  );
 }
