@@ -14,6 +14,20 @@ const theme = extendTheme({
       }),
     },
   },
+  styles: {
+    global: {
+      a: {
+        color: "green.600",
+        transition: "color 0.2s linear",
+        _hover: {
+          color: "green.500",
+        },
+        _active: {
+          color: "green.400",
+        },
+      },
+    },
+  },
 });
 
 export default theme;
