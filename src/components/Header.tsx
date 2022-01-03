@@ -14,29 +14,32 @@ export default function Header() {
       mb={20}
     >
       <Box>
-        <Heading
-          as="h1"
-          size="2xl"
-          letterSpacing="tighter"
-          display="block"
-          bgGradient="linear(to-tl, #FCE38A, #F38181)"
-          bgClip="text"
-          sx={{ cursor: "default" }}
-        >
-          Captain
-        </Heading>
-        <Heading
-          as="h4"
-          size="sm"
-          fontWeight="normal"
-          color="gray.50"
-          mt={1}
-          ml={1}
-        >
-          Conservation Area Prioritization
-          <br />
-          Through Artificial Intelligence
-        </Heading>
+        <Link href="/">
+          <a>
+            <Heading
+              as="h1"
+              size="2xl"
+              letterSpacing="tighter"
+              display="block"
+              bgGradient="linear(to-tl, #FCE38A, #F38181)"
+              bgClip="text"
+            >
+              Captain
+            </Heading>
+            <Heading
+              as="h4"
+              size="sm"
+              fontWeight="normal"
+              color="gray.50"
+              mt={1}
+              ml={1}
+            >
+              Conservation Area Prioritization
+              <br />
+              Through Artificial Intelligence
+            </Heading>
+          </a>
+        </Link>
       </Box>
 
       <Spacer />
