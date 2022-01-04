@@ -70,26 +70,25 @@ export default function Figures() {
     }
   }, []);
 
-  const onFrameChange = (value: number) => setFrame(value);
-  const onPlotClick = (plotId: number) => setPlot(plotId);
-
   return (
     <>
       <SimpleGrid
         spacing="40px"
-        mb={20}
-        mx={{ sm: 4, md: 4, lg: "auto" }}
-        px={10}
-        columns={{ sm: 1, md: 2 }}
-        maxWidth={1000}
+        mt={2}
+        mb={10}
+        mx="auto"
+        p={4}
+        columns={{ base: 1, md: 2 }}
+        maxWidth={{ base: "60ch", lg: "120ch" }}
       >
         <Box>
-          <ChakraImage htmlWidth={400} src={getImage(frame, plot)} />
-          <HStack width={400} spacing="24px">
+          <ChakraImage htmlWidth="100%" src={getImage(frame, plot)} />
+
+          <HStack spacing="24px">
             <ButtonGroup isAttached variant="outline">
               <IconButton
                 colorScheme="blue"
-                aria-label="Restart"
+                aria-label="restart"
                 icon={<Icon as={RefreshIcon} />}
                 fontSize={20}
                 isDisabled={frame === 1}
@@ -100,7 +99,7 @@ export default function Figures() {
               />
               <IconButton
                 colorScheme="blue"
-                aria-label={isPlaying ? "Stop" : "Play"}
+                aria-label={isPlaying ? "stop" : "play"}
                 icon={<Icon as={isPlaying ? StopIcon : PlayIcon} />}
                 isActive={isPlaying}
                 fontSize={20}
@@ -119,7 +118,7 @@ export default function Figures() {
               value={frame}
               min={1}
               max={MAX_FRAME}
-              onChange={(_, value) => onFrameChange(value)}
+              onChange={(_, value) => setFrame(value)}
             >
               <NumberInputField />
               <NumberInputStepper>
@@ -132,7 +131,7 @@ export default function Figures() {
               min={1}
               max={MAX_FRAME}
               value={frame}
-              onChange={onFrameChange}
+              onChange={setFrame}
               focusThumbOnChange={false}
             >
               <SliderTrack>
@@ -142,24 +141,23 @@ export default function Figures() {
             </Slider>
           </HStack>
         </Box>
-        <Box width={400}>
-          <Heading as="h1" size="lg" my={4}>
+
+        <Box>
+          <Heading as="h3" size="md" mt={{ base: 4, lg: 7 }}>
             {metaData[plot].title}
           </Heading>
-          <Text>{metaData[plot].description}</Text>
+
+          <Text mt={6}>{metaData[plot].description}</Text>
         </Box>
       </SimpleGrid>
 
       <SimpleGrid
         columns={{ sm: 3, md: 4, lg: 6 }}
         gap={4}
-        p={10}
         mb={20}
-        mx={{ sm: 4, md: 4, lg: "auto" }}
-        maxWidth={1000}
-        bgGradient="linear(to-b, gray.50, gray.100)"
-        boxShadow="inner"
-        rounded="md"
+        mx="auto"
+        p={4}
+        maxWidth={{ base: "60ch", lg: "120ch" }}
       >
         {plotIds.map((plotId) => (
           <Card
@@ -168,7 +166,7 @@ export default function Figures() {
             description={metaData[plotId].description}
             src={getImage(frame, plotId, "jpg")}
             isActive={plot === plotId}
-            onClick={() => onPlotClick(plotId)}
+            onClick={() => setPlot(plotId)}
           />
         ))}
       </SimpleGrid>

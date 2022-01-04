@@ -20,14 +20,14 @@ export default function Card({
     >
       <Box
         p={3}
-        boxShadow={isActive ? "outline" : "base"}
-        rounded="md"
-        background={`linear-gradient(transparent 67%, white 72%), url("${src}") -15px -15px no-repeat`}
-        bgSize="120%"
+        boxShadow={isActive ? "xl" : "base"}
+        rounded="sm"
+        background={`url("${src}") -15px -15px no-repeat`}
+        bgSize="100%"
         pos="relative"
         width={140}
         height={155}
-        _hover={{ boxShadow: "outline" }}
+        _hover={{ boxShadow: "lg" }}
         onClick={onClick}
         style={{ cursor: "pointer" }}
         {...props}
