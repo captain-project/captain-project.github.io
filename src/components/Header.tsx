@@ -16,7 +16,7 @@ export default function Header() {
       px={[2, 6, 12, 20]}
     >
       <Link href="/">
-        <a>
+        <a tabIndex={-1}>
           <Flex justify="space-between" align="center" wrap="wrap" mr={4}>
             <Heading
               as="h1"
@@ -33,6 +33,8 @@ export default function Header() {
               size="sm"
               fontWeight="normal"
               color="gray.300"
+              textShadow="1px 1px 3px #0F2935"
+              display={{ base: "none", lg: "block" }}
               mt={1}
               ml={1}
             >
@@ -50,7 +52,7 @@ export default function Header() {
         <List
           role="navigation"
           className={styles.navigation}
-          display={["block", "block", "flex"]}
+          display={["block", "flex"]}
           gap={2}
         >
           <ListItem>
