@@ -87,7 +87,7 @@ export default function Home() {
 
           <Box>
             <Heading as="h2" size="xl" id="download">
-              Captian protects more species compared to Marxan
+              Captain protects more species than Marxan
             </Heading>
 
             <Text mt={8}>
