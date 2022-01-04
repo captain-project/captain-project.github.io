@@ -15,16 +15,16 @@ export default function Header() {
       py={6}
       px={[2, 6, 12, 20]}
     >
-      <Box>
-        <Link href="/">
-          <a>
+      <Link href="/">
+        <a>
+          <Flex justify="space-between" align="center" wrap="wrap" mr={4}>
             <Heading
               as="h1"
               size="2xl"
               letterSpacing="tighter"
-              display="block"
               bgGradient="linear(to-tl, #FCE38A, #F38181)"
               bgClip="text"
+              mr={4}
             >
               Captain
             </Heading>
@@ -32,7 +32,7 @@ export default function Header() {
               as="h4"
               size="sm"
               fontWeight="normal"
-              color="gray.50"
+              color="gray.300"
               mt={1}
               ml={1}
             >
@@ -40,9 +40,9 @@ export default function Header() {
               <br />
               Through Artificial Intelligence
             </Heading>
-          </a>
-        </Link>
-      </Box>
+          </Flex>
+        </a>
+      </Link>
 
       <Spacer />
 
