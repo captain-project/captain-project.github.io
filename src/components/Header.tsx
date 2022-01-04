@@ -51,7 +51,7 @@ export default function Header() {
           role="navigation"
           className={styles.navigation}
           display={["block", "block", "flex"]}
-          gap={4}
+          gap={2}
         >
           <ListItem>
             <Link href="/">
