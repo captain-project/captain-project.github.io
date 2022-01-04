@@ -77,7 +77,7 @@ export default function Figures() {
         mt={2}
         mb={10}
         mx="auto"
-        p={4}
+        p="1rem"
         columns={{ base: 1, md: 2 }}
         maxWidth={{ base: "60ch", lg: "120ch" }}
       >
@@ -156,7 +156,7 @@ export default function Figures() {
         gap={4}
         mb={20}
         mx="auto"
-        p={4}
+        p="1rem"
         maxWidth={{ base: "60ch", lg: "120ch" }}
       >
         {plotIds.map((plotId) => (
