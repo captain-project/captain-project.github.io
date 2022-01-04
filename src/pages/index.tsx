@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Box
         as="section"
-        bgImage="url('//images.pexels.com/photos/2606532/pexels-photo-2606532.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')"
+        bgImage="/images/pexels-photo-2606532.jpeg"
         bgSize="cover"
         h="100vh"
         w="100%"
