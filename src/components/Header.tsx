@@ -6,7 +6,8 @@ export default function Header() {
   return (
     <Flex
       as="header"
-      pos="fixed"
+      pos={["absolute", "absolute", "fixed"]}
+      top={0}
       zIndex={9999}
       bg="hsl(0 0% 0% / 0.7)"
       align="center"
@@ -49,7 +50,7 @@ export default function Header() {
         <List
           role="navigation"
           className={styles.navigation}
-          display={{ base: "block", md: "flex" }}
+          display={["block", "block", "flex"]}
           gap={4}
         >
           <ListItem>

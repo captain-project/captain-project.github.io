@@ -5,7 +5,6 @@ export default function Home() {
     <>
       <Box
         as="section"
-        top={0}
         bgImage="url('//images.pexels.com/photos/2606532/pexels-photo-2606532.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')"
         bgSize="cover"
         h="100vh"
@@ -26,8 +25,7 @@ export default function Home() {
       </Box>
 
       <Box as="main" py={40}>
-        <Container>
-          <Text mt={5}></Text>
+        <Container as="article">
           <Heading as="h2" size="xl" mt={30} id="download">
             Download
           </Heading>
