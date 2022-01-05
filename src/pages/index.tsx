@@ -1,4 +1,5 @@
 import {
+  Button,
   Heading,
   Text,
   Box,
@@ -7,7 +8,9 @@ import {
   Image,
   HStack,
   VStack,
+  Link,
 } from "@chakra-ui/react";
+import { DownloadIcon } from "@chakra-ui/icons";
 
 export default function Home() {
   return (
@@ -20,7 +23,14 @@ export default function Home() {
         w="100%"
         p={2}
       >
-        <Flex h="100%" justify="center" align="center">
+        <Flex
+          h="100%"
+          justify="center"
+          align="center"
+          flexDir="column"
+          mt={20}
+          gap={10}
+        >
           <Heading
             as="h2"
             size="3xl"
@@ -30,6 +40,12 @@ export default function Home() {
           >
             The Captain Project
           </Heading>
+
+          <Link href="//github.com/captain-project/captain">
+            <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
+              Download
+            </Button>
+          </Link>
         </Flex>
       </Box>
 
@@ -150,6 +166,18 @@ export default function Home() {
             <Text mt={5}>
               A desktop app is coming soon. The Python source code is available
               on <a href="//github.com/captain-project/captain">GitHub</a>.
+            </Text>
+          </Box>
+          <Box>
+            <Heading as="h2" size="xl" id="download">
+              Join the community
+            </Heading>
+            <Text mt={5}>
+              Ask questions and get help on{" "}
+              <a href="//github.com/captain-project/captain/discussions">
+                GitHub Discussions
+              </a>
+              .
             </Text>
           </Box>
         </SimpleGrid>
