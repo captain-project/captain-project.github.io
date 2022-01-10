@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Image, Link, Text } from "@chakra-ui/react";
+import { Container, Box, Heading, Link, Text } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
@@ -58,14 +58,6 @@ export default function Supplementary() {
           biological and ecosystem values in a rapidly changing and
           resource-limited world.
         </Text>
-
-        <Link href="/images/RL_framework_researchstat.png" isExternal>
-          <Image
-            src="/images/RL_framework_researchstat_thumb.png"
-            alt="Framework"
-            loading="eager"
-          />
-        </Link>
 
         <Heading as="h2" size="xl" mt={40}>
           Supplementary Figures
