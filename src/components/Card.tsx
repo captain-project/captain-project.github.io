@@ -25,8 +25,8 @@ export default function Card({
         background={`url("${src}") -15px -15px no-repeat`}
         bgSize="100%"
         pos="relative"
-        width={140}
-        height={155}
+        width="140px"
+        height="155px"
         _hover={{ boxShadow: "lg" }}
         onClick={onClick}
         style={{ cursor: "pointer" }}

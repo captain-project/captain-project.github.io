@@ -103,7 +103,7 @@ export default function Home() {
 
           <Box>
             <Heading as="h2" size="xl" id="download">
-              Captain protects more species than Marxan
+              Captain protects more species than the state of the art
             </Heading>
 
             <Text mt={8}>
@@ -166,6 +166,13 @@ export default function Home() {
             <Text mt={5}>
               A desktop app is coming soon. The Python source code is available
               on <a href="//github.com/captain-project/captain">GitHub</a>.
+            </Text>
+            <Text mt={5}>
+              We provide{" "}
+              <a href="//github.com/captain-project/notebooks">
+                Jupyter Notebooks
+              </a>{" "}
+              that showcase the capabilities of Captain.
             </Text>
           </Box>
           <Box>
