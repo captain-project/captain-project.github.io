@@ -30,7 +30,7 @@ export default function Header() {
                 bgClip="text"
                 mr={4}
               >
-                Captain
+                CAPTAIN
               </Heading>
               <Heading
                 as="h2"
@@ -43,7 +43,7 @@ export default function Header() {
               >
                 Conservation Area Prioritization
                 <br />
-                Through Artificial Intelligence
+                Through Artificial INtelligence
               </Heading>
             </Flex>
           </a>
