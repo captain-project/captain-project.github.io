@@ -61,15 +61,15 @@ export default function Home() {
           <Box>
             <Heading as="h2" size="xl" id="download">
               How do we best protect biodiversity in a rapidly changing world
-              with a limited budget?
+              and with limited resources?
             </Heading>
 
             <Text mt={8}>
-              Climate change and ... Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Delectus commodi optio illo ipsa vitae
-              repellendus exercitationem fugiat excepturi! Itaque beatae nam
-              totam doloribus quasi doloremque illum eligendi corporis esse
-              fuga.
+              Over a million species face extinction, carrying with them untold 
+              options for food medicine, fibre, shelter, ecological resilience, 
+              aesthetic and cultural values. We urgently need to design conservation 
+              policies that maximize the protection of biodiversity and its 
+              contributions to people, within the constraints of limited budgets.
             </Text>
           </Box>
           <Box>
@@ -82,15 +82,16 @@ export default function Home() {
 
           <Box>
             <Heading as="h2" size="xl" id="download">
-              Solution: Conservation area prioritization through artificial
-              intelligence
+              Harnessing the power of AI to optimize conservation policies
             </Heading>
 
             <Text mt={8}>
-              We use reinforcement learning to ... lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Delectus commodi optio illo ipsa
-              vitae repellendus exercitationem fugiat excepturi! Itaque beatae
-              nam totam doloribus quasi doloremque illum eligendi corporis esse
+              We use reinforcement learning to train models for conservation
+              prioritization that bet use the avaiable data and resources. 
+              CAPTAIN models can work with basic species distribution data but
+              can handle complex multidimensional data and their temporal trends, 
+              including land use and climate change. 
+              
               fuga.
             </Text>
           </Box>
@@ -103,15 +104,15 @@ export default function Home() {
 
           <Box>
             <Heading as="h2" size="xl" id="download">
-              Captain protects more species than the state of the art
+              Conservation policies outperforming the state-of-the-art
             </Heading>
 
             <Text mt={8}>
-              Depending on the settings, we protect ... lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Delectus commodi optio illo
-              ipsa vitae repellendus exercitationem fugiat excepturi! Itaque
-              beatae nam totam doloribus quasi doloremque illum eligendi
-              corporis esse fuga.
+              Our experiments using simulated and empirical data indicate
+              that CAPTAIN yields more reliable conservation solutions than
+              alternative state-of-the-art software forsystematic conservation
+              planning.
+              
             </Text>
           </Box>
           <Box>
@@ -127,10 +128,9 @@ export default function Home() {
             </Heading>
 
             <Text mt={8}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              commodi optio illo ipsa vitae repellendus exercitationem fugiat
-              excepturi! Itaque beatae nam totam doloribus quasi doloremque
-              illum eligendi corporis esse fuga.
+              Optimize policies toward different conservation targets, 
+              e.g. aiming to minimize species loss or to maximize the amount 
+              of protected area, and compare their outcomes and tradeoffs.
             </Text>
           </Box>
           <Box textAlign="center" fontSize="sm">
@@ -147,7 +147,7 @@ export default function Home() {
                   src="/images/max-carbon-storage.png"
                   alt="Maximize carbon storage"
                 />
-                <Text as="figcaption">Maximize carbon storage</Text>
+                <Text as="figcaption">Minimize economic value loss</Text>
               </VStack>
               <VStack w="30%">
                 <Image
