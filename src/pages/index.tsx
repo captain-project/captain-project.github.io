@@ -82,12 +82,12 @@ export default function Home() {
 
           <Box>
             <Heading as="h2" size="xl" id="download">
-              Harnessing the power of AI to optimize conservation policies
+              Harnessing the power of AI to optimize conservation efforts
             </Heading>
 
             <Text mt={8}>
               We use reinforcement learning to train models for conservation
-              prioritization that bet use the avaiable data and resources. 
+              prioritization that best use the available data and resources. 
               CAPTAIN models can work with basic species distribution data but
               can handle complex multidimensional data and their temporal trends, 
               including land use and climate change. 
@@ -108,7 +108,7 @@ export default function Home() {
             <Text mt={8}>
               Our experiments using simulated and empirical data indicate
               that CAPTAIN yields more reliable conservation solutions than
-              alternative state-of-the-art software forsystematic conservation
+              alternative state-of-the-art software for systematic conservation
               planning.
               
             </Text>
