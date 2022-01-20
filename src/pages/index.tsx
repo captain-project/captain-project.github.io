@@ -91,8 +91,6 @@ export default function Home() {
               CAPTAIN models can work with basic species distribution data but
               can handle complex multidimensional data and their temporal trends, 
               including land use and climate change. 
-              
-              fuga.
             </Text>
           </Box>
           <Box>
