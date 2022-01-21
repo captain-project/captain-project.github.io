@@ -1,7 +1,7 @@
 [
     {
       "title": "Species richness",
-      "description": "Figure description missing."
+      "description": "Species richness and its evolution through time. After monitoring the system for 3 iterations an _agent_ establishes protected areas (outlined in black) based on a policy optimized to minimize biodiversity loss."
     },
     {
       "title": "Population density",
