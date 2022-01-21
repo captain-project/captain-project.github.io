@@ -1,26 +1,26 @@
 [
     {
       "title": "Species richness",
-      "description": "Species richness and its evolution through time. After monitoring the system for 3 iterations an _agent_ establishes protected areas (outlined in black) based on a policy optimized to minimize biodiversity loss."
+      "description": "Species richness and its evolution through time. After monitoring the system for 3 iterations CAPTAIN's agent establishes protected units (outlined in black) based on a policy optimized to minimize biodiversity loss. The number of protected units is constrained by a predefined budget."
     },
     {
       "title": "Population density",
-      "description": "Figure description missing."
+      "description": "As the anthropogenic disturbance increases in the system and as a consequence of climate change, the natural mortality of individuals changes asa function of species-specific tolerances. As a consequence the absolute number of individuals decreases in cells with high disturbance and the relative abundance of species changes through time."
     },
     {
-      "title": "Total population size",
-      "description": "Figure description missing."
+      "title": "Species rank-abundance",
+      "description": "The total population size of species varies through time as a function of species-specific geographic range and tolerance to anthropogenic pressure and climate change."
     },
     {
       "title": "Phylogenetic diversity",
+      "description": "A phylogenetic tree shows the relationships among all species in the system. Branches highlighted in red represent species that go extinct throughout the simulation."
+    },
+    {
+      "title": "Anthropogenic disturbance",
       "description": "Figure description missing."
     },
     {
-      "title": "Disturbance",
-      "description": "Figure description missing."
-    },
-    {
-      "title": "Mean annual temperature",
+      "title": "Climate",
       "description": "Figure description missing."
     },
     {
