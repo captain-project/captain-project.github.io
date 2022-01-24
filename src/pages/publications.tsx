@@ -60,8 +60,19 @@ export default function Supplementary() {
         </Text>
 
         <Heading as="h2" size="xl" mt={40}>
-          Supplementary Figures
+          A simulated natural system
         </Heading>
+         <Text mt={8}>
+          CAPTAIN uses simulations based on an individual-based spatially
+           explicit model of biodiversity to train policies through 
+           Reinforcement Learning. The simulations can include hundreds of
+           species and millions of individuals and tracks global and local
+           biodiversity changes resulting from natural processes of mortality,
+           replacement and dispersal and from changes in anthropogenic 
+           pressure and climate. Simlated systems are used to train models that
+           can be then applied to empirical data and to becnhmark the outcome
+           of different conservation policies and targets. 
+         </Text>
       </Container>
 
       <Figures />
