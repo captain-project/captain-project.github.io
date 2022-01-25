@@ -36,7 +36,7 @@ export default function Supplementary() {
           prioritisation that combines simulation models, reinforcement learning
           and ground validation to identify optimal policies. Our methodology,
           CAPTAIN (Conservation Area Prioritisation Through Artificial
-          Intelligence Networks), quantifies the trade-off between the costs and
+          INtelligence), quantifies the trade-off between the costs and
           benefits of area and biodiversity protection, allowing the exploration
           of multiple biodiversity metrics.
         </Text>
