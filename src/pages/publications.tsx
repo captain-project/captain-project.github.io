@@ -16,7 +16,7 @@ export default function Supplementary() {
           href="papers/Silvestro_et_al_2022_NatSust.pdf"
           isExternal
         >
-          Download PDF <ExternalLinkIcon mx="2px" mt="-2px" />
+          Download open access article: <ExternalLinkIcon mx="2px" mt="-2px" />
         </Link>
 
         <Heading as="h3" size="md" mt={12}>
