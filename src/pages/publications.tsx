@@ -19,7 +19,7 @@ export default function Supplementary() {
           Download open access article: <ExternalLinkIcon mx="2px" mt="-2px" />
         </Link>
 
-        <Heading as="h3" size="md" mt={12}>
+        {/* <Heading as="h3" size="md" mt={12}>
           Abstract
         </Heading>
 
@@ -57,7 +57,7 @@ export default function Supplementary() {
           intelligence holds great promise for improving the conservation of
           biological and ecosystem values in a rapidly changing and
           resource-limited world.
-        </Text>
+        </Text> */}
 
         <Heading as="h2" size="xl" mt={40}>
           A simulated natural system
