@@ -7,10 +7,10 @@ export default function Supplementary() {
     <Box as="main" pt="200">
       <Container as="article">
         <Heading as="h2" size="xl">
-          Optimising biodiversity protection through artificial intelligence
+          Improving biodiversity protection through artificial intelligence
         </Heading>
         <Heading as="h3" size="sm" my={6}>
-          Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2021)
+          Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022)
         </Heading>
         <Link
           href="papers/Silvestro_et_al_Main_revised_incl_Methods.pdf"
