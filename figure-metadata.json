@@ -17,34 +17,34 @@
     },
     {
       "title": "Anthropogenic disturbance",
-      "description": "Figure description missing."
+      "description": "Anthropogenic pressure on the environemtn is modeled as affecting both the carrying capacity of a cell and increasing mortality rates based on species specific sensitivity to disturbance."
     },
     {
       "title": "Climate",
-      "description": "Figure description missing."
+      "description": "Climate change and fluctuations can affect the geographic range of species based on species-specific tolerances."
     },
     {
       "title": "Economic loss",
-      "description": "Figure description missing."
+      "description": "Economic loss is simulated as a function of biodiversity loss based on the economic value of species."
     },
     {
-      "title": "Value and diversity",
-      "description": "Figure description missing."
+      "title": "Variables through time",
+      "description": "As disturbance increases and through the effects climate change the model tracks species, phylogenetic diversity, and economic losses."
     },
     {
       "title": "Species A",
-      "description": "Figure description missing."
+      "description": "Example of a widespread species that despite some range contraction survives both within and outside protected areas."
     },
     {
       "title": "Species B",
-      "description": "Figure description missing."
+      "description": "Example of a species whose range becomes fragmented due to expanding disturbance, but with several populations surviving in protected areas."
     },
     {
       "title": "Species C",
-      "description": "Figure description missing."
+      "description": "Example of a species that only survives in protected areas."
     },
     {
       "title": "Species D",
-      "description": "Figure description missing."
+      "description": "Some species, espcially narrow endemics might go extinct even within protected areas due to low tolerance to climate change and higher mortality compared with competing species."
     }
   ]
