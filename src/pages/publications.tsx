@@ -13,7 +13,7 @@ export default function Supplementary() {
           Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022)
         </Heading>
         <Link
-          href="papers/Silvestro_et_al_Main_revised_incl_Methods.pdf"
+          href="papers/Silvestro_et_al_2022_NatSust.pdf"
           isExternal
         >
           Download PDF <ExternalLinkIcon mx="2px" mt="-2px" />
