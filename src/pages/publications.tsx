@@ -59,7 +59,7 @@ export default function Supplementary() {
           resource-limited world.
         </Text> */}
 
-        <Heading as="h2" size="xl" mt={40}>
+        <Heading as="h3" size="md" mt={12}>
           A simulated natural system
         </Heading>
          <Text mt={8}>
