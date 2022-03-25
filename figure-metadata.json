@@ -17,7 +17,7 @@
     },
     {
       "title": "Anthropogenic disturbance",
-      "description": "Anthropogenic pressure on the environemtn is modeled as affecting both the carrying capacity of a cell and increasing mortality rates based on species specific sensitivity to disturbance."
+      "description": "Anthropogenic pressure on the environment is modeled as affecting both the carrying capacity of a cell and increasing individual mortality rates based on species-specific sensitivity to disturbance."
     },
     {
       "title": "Climate",
