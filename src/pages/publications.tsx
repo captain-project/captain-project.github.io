@@ -10,7 +10,13 @@ export default function Supplementary() {
           Improving biodiversity protection through artificial intelligence
         </Heading>
         <Heading as="h3" size="sm" my={6}>
-          Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022)
+          Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022) Nature Sustainability, DOI: 
+          <Link
+          href="https://www.nature.com/articles/s41893-022-00851-6"
+          isExternal
+        >
+          DOI: 10.1038/s41893-022-00851-6 <ExternalLinkIcon mx="2px" mt="-2px" />
+        </Link>
         </Heading>
         <Link
           href="papers/Silvestro_et_al_2022_NatSust.pdf"
