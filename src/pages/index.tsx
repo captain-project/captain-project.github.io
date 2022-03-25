@@ -41,7 +41,7 @@ export default function Home() {
             The Captain Project
           </Heading>
 
-          <Link href="//github.com/captain-project/captain">
+          <Link href="https://github.com/captain-project/captain-project">
             <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
               Download
             </Button>
@@ -65,11 +65,12 @@ export default function Home() {
             </Heading>
 
             <Text mt={8}>
-              Over a million species face extinction, carrying with them untold 
-              options for food medicine, fibre, shelter, ecological resilience, 
-              aesthetic and cultural values. We urgently need to design conservation 
-              policies that maximize the protection of biodiversity and its 
-              contributions to people, within the constraints of limited budgets.
+              Over a million species face extinction, carrying with them untold
+              options for food medicine, fibre, shelter, ecological resilience,
+              aesthetic and cultural values. We urgently need to design
+              conservation policies that maximize the protection of biodiversity
+              and its contributions to people, within the constraints of limited
+              budgets.
             </Text>
           </Box>
           <Box>
@@ -87,10 +88,10 @@ export default function Home() {
 
             <Text mt={8}>
               We use reinforcement learning to train models for conservation
-              prioritization that best use the available data and resources. 
+              prioritization that best use the available data and resources.
               CAPTAIN models can work with basic species distribution data but
-              can handle complex multidimensional data and their temporal trends, 
-              including land use and climate change. 
+              can handle complex multidimensional data and their temporal
+              trends, including land use and climate change.
             </Text>
           </Box>
           <Box>
@@ -106,11 +107,10 @@ export default function Home() {
             </Heading>
 
             <Text mt={8}>
-              Our experiments using simulated and empirical data indicate
-              that CAPTAIN yields more reliable conservation solutions than
+              Our experiments using simulated and empirical data indicate that
+              CAPTAIN yields more reliable conservation solutions than
               alternative state-of-the-art software for systematic conservation
               planning.
-              
             </Text>
           </Box>
           <Box>
@@ -126,9 +126,9 @@ export default function Home() {
             </Heading>
 
             <Text mt={8}>
-              Optimize policies toward different conservation targets, 
-              e.g. aiming to minimize species loss or to maximize the amount 
-              of protected area, and compare their outcomes and tradeoffs.
+              Optimize policies toward different conservation targets, e.g.
+              aiming to minimize species loss or to maximize the amount of
+              protected area, and compare their outcomes and tradeoffs.
             </Text>
           </Box>
           <Box textAlign="center" fontSize="sm">

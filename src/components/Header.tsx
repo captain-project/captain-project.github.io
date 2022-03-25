@@ -69,6 +69,11 @@ export default function Header() {
               </Link>
             </ListItem>
             <ListItem>
+              <Link href="/team">
+                <a>Meet the team</a>
+              </Link>
+            </ListItem>
+            <ListItem>
               <Link href="/publications">
                 <a>Publications</a>
               </Link>
