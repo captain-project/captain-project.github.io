@@ -29,7 +29,7 @@ export default function Team() {
     <Box as="main" pt="150">
       <Container as="article" mb={20}>
         <Heading as="h2" size="xl">
-          Our team
+          Meet our team
         </Heading>
 
         <Heading as="h3" size="md" mt={12}>
