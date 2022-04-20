@@ -64,7 +64,7 @@ export default function Team() {
         </Text>
 
         <Heading as="h3" size="md" mt={12}>
-          Stefano Gloria
+          Stefano Goria
         </Heading>
         <Text mt={2}>
           <Link
