@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Link, Text } from "@chakra-ui/react";
+import { Container, Box, Heading, Link, Text, Image } from "@chakra-ui/react";
 
 const GoogleScholarIcon = ({ size }: { size: number }) => (
   <svg
@@ -35,6 +35,12 @@ export default function Team() {
         <Heading as="h3" size="md" mt={12}>
           Daniele Silvestro
         </Heading>
+        <Image
+          src="/images/team/DS.png"
+          alt="Daniele Silvestro"
+          width="188px"
+          height="229px"
+        />
         <Text mt={2}>
           <Link
             href="https://www.unifr.ch/bio/en/groups/silvestro"
@@ -66,6 +72,12 @@ export default function Team() {
         <Heading as="h3" size="md" mt={12}>
           Stefano Goria
         </Heading>
+        <Image
+          src="/images/team/SG.png"
+          alt="Stefano Gloria"
+          width="188px"
+          height="229px"
+        />
         <Text mt={2}>
           <Link
             href="https://thymia.ai/"
@@ -85,6 +97,12 @@ export default function Team() {
         <Heading as="h3" size="md" mt={12}>
           Thomas Sterner
         </Heading>
+        <Image
+          src="/images/team/TS.png"
+          alt="Thomas Sterner"
+          width="188px"
+          height="229px"
+        />
         <Text mt={2}>
           <Link
             href="https://sternerthomas.com/thomas-sterner/"
@@ -114,6 +132,12 @@ export default function Team() {
         <Heading as="h3" size="md" mt={12}>
           Alexandre Antonelli
         </Heading>
+        <Image
+          src="/images/team/AA.png"
+          alt="Alexandre Antonelli"
+          width="188px"
+          height="229px"
+        />
         <Text mt={2}>
           <Link
             href="https://antonelli-lab.net"
