@@ -1,4 +1,14 @@
-import { Container, Box, Heading, Link, Text, Image } from "@chakra-ui/react";
+import {
+  Container,
+  Box,
+  Heading,
+  Link,
+  Text,
+  Image,
+  HStack,
+  VStack,
+  Stack,
+} from "@chakra-ui/react";
 
 const GoogleScholarIcon = ({ size }: { size: number }) => (
   <svg
@@ -24,146 +34,114 @@ const WebsiteIcon = ({ size }: { size: number }) => (
   </svg>
 );
 
-export default function Team() {
+type Person = {
+  name: string;
+  image: string;
+  webpage: string;
+  scholar?: string;
+  bio: string;
+};
+
+type Team = Person[];
+
+export function getStaticProps(): { props: { team: Person[] } } {
+  return {
+    props: {
+      team: [
+        {
+          name: "Daniele Silvestro",
+          image: "/images/team/DS.png",
+          webpage: "https://www.unifr.ch/bio/en/groups/silvestro",
+          scholar:
+            "https://scholar.google.com/citations?hl=en&user=X1jlzMoAAAAJ&view_op=list_works&sortby=pubdate",
+          bio: `Daniele Silvestro is a computational biologist and group leader at
+          the Department of Biology at the University of Fribourg,
+          Switzerland and a research associate at the Department of
+          Biological and Environmental Sciences and Gothenburg Global
+          Biodiversity Centre at Gothenburg University.`,
+        },
+
+        {
+          name: "Stefano Goria",
+          image: "/images/team/SG.png",
+          webpage: "https://thymia.ai/",
+          bio: `Stefano Goria has a PhD in theoretical physics and is the CTO and
+            co-founder of Thymia Limited, a London-based mental health tech
+            start-up.`,
+        },
+        {
+          name: "Thomas Sterner",
+          image: "/images/team/TS.png",
+          webpage: "https://sternerthomas.com/thomas-sterner/",
+          scholar:
+            "https://scholar.google.com/citations?hl=en&user=QPcgMqwAAAAJ",
+          bio: `Thomas Sterner is a Professor of Environmental Economics at the
+            University of Gothenburg, His research and publications are mostly
+            focused on the design of policy instruments which address
+            environmental problems.`,
+        },
+        {
+          name: "Alexandre Antonelli",
+          image: "/images/team/AA.png",
+          webpage: "https://antonelli-lab.net",
+          scholar: "https://scholar.google.se/citations?user=KYbhJxMAAAAJ",
+          bio: `Alexandre Antonelli is the Director of Science at the Royal Botanic
+            Gardens - Kew and Professor at the Department of Biological and
+            Environmental Sciences and Gothenburg Global Biodiversity Centre at
+            Gothenburg University.`,
+        },
+      ],
+    },
+  };
+}
+
+export default function Team({ team }: { team: Person[] }) {
   return (
     <Box as="main" pt="150">
       <Container as="article" mb={20}>
-        <Heading as="h2" size="xl">
+        <Heading as="h2" size="xl" mb={12}>
           Meet our team
         </Heading>
 
-        <Heading as="h3" size="md" mt={12}>
-          Daniele Silvestro
-        </Heading>
-        <Image
-          src="/images/team/DS.png"
-          alt="Daniele Silvestro"
-          width="188px"
-          height="229px"
-        />
-        <Text mt={2}>
-          <Link
-            href="https://www.unifr.ch/bio/en/groups/silvestro"
-            isExternal
-            title="Silvestro Group"
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <WebsiteIcon size={20} />
-          </Link>
-          <Link
-            href="https://scholar.google.com/citations?hl=en&user=X1jlzMoAAAAJ&view_op=list_works&sortby=pubdate"
-            isExternal
-            ml={2}
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <GoogleScholarIcon size={20} />
-          </Link>
-        </Text>
-        <Text mt={2}>
-          Daniele Silvestro is a computational biologist and group leader at the
-          Department of Biology at the University of Fribourg, Switzerland and a
-          research associate at the Department of Biological and Environmental
-          Sciences and Gothenburg Global Biodiversity Centre at Gothenburg
-          University.
-        </Text>
-
-        <Heading as="h3" size="md" mt={12}>
-          Stefano Goria
-        </Heading>
-        <Image
-          src="/images/team/SG.png"
-          alt="Stefano Gloria"
-          width="188px"
-          height="229px"
-        />
-        <Text mt={2}>
-          <Link
-            href="https://thymia.ai/"
-            isExternal
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <WebsiteIcon size={20} />
-          </Link>
-        </Text>
-        <Text mt={2}>
-          Stefano Goria has a PhD in theoretical physics and is the CTO and
-          co-founder of Thymia Limited, a London-based mental health tech
-          start-up.
-        </Text>
-
-        <Heading as="h3" size="md" mt={12}>
-          Thomas Sterner
-        </Heading>
-        <Image
-          src="/images/team/TS.png"
-          alt="Thomas Sterner"
-          width="188px"
-          height="229px"
-        />
-        <Text mt={2}>
-          <Link
-            href="https://sternerthomas.com/thomas-sterner/"
-            isExternal
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <WebsiteIcon size={20} />
-          </Link>
-          <Link
-            href="https://scholar.google.com/citations?hl=en&user=QPcgMqwAAAAJ"
-            isExternal
-            ml={2}
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <GoogleScholarIcon size={20} />
-          </Link>
-        </Text>
-        <Text mt={2}>
-          Thomas Sterner is a Professor of Environmental Economics at the
-          University of Gothenburg, His research and publications are mostly
-          focused on the design of policy instruments which address
-          environmental problems.
-        </Text>
-
-        <Heading as="h3" size="md" mt={12}>
-          Alexandre Antonelli
-        </Heading>
-        <Image
-          src="/images/team/AA.png"
-          alt="Alexandre Antonelli"
-          width="188px"
-          height="229px"
-        />
-        <Text mt={2}>
-          <Link
-            href="https://antonelli-lab.net"
-            isExternal
-            title="Antonelli Lab"
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <WebsiteIcon size={20} />
-          </Link>
-          <Link
-            href="https://scholar.google.se/citations?user=KYbhJxMAAAAJ"
-            isExternal
-            ml={2}
-            opacity={0.5}
-            _hover={{ opacity: 1 }}
-          >
-            <GoogleScholarIcon size={20} />
-          </Link>
-        </Text>
-        <Text mt={2}>
-          Alexandre Antonelli is the Director of Science at the Royal Botanic
-          Gardens - Kew and Professor at the Department of Biological and
-          Environmental Sciences and Gothenburg Global Biodiversity Centre at
-          Gothenburg University.
-        </Text>
+        {team.map((person) => (
+          <Stack direction={["column", "row"]} mb={12}>
+            <Image
+              src={person.image}
+              alt={person.name}
+              width="188px"
+              height="229px"
+              mr={[0, 12]}
+            />
+            <VStack align="start">
+              <Heading as="h3" size="md">
+                {person.name}
+              </Heading>
+              <Text mt={2}>
+                <Link
+                  href={person.webpage}
+                  isExternal
+                  title="Silvestro Group"
+                  opacity={0.5}
+                  _hover={{ opacity: 1 }}
+                >
+                  <WebsiteIcon size={20} />
+                </Link>
+                {person.scholar && (
+                  <Link
+                    href={person.scholar}
+                    isExternal
+                    ml={2}
+                    opacity={0.5}
+                    _hover={{ opacity: 1 }}
+                  >
+                    <GoogleScholarIcon size={20} />
+                  </Link>
+                )}
+              </Text>
+              <Text mt={2}>{person.bio}</Text>
+            </VStack>
+          </Stack>
+        ))}
       </Container>
     </Box>
   );
