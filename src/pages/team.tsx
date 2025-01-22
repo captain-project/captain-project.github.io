@@ -75,14 +75,11 @@ export function getStaticProps(): { props: { team: Person[] } } {
           name: "Daniele Silvestro",
           image: "/images/team/DS.png",
           email: "daniele@captaintech.ai",
-          webpage: "https://www.unifr.ch/bio/en/groups/silvestro",
+          webpage: "https://github.com/dsilvestro/",
           scholar:
             "https://scholar.google.com/citations?hl=en&user=X1jlzMoAAAAJ&view_op=list_works&sortby=pubdate",
-          bio: `Daniele Silvestro is a computational biologist and group leader at
-          the Department of Biology at the University of Fribourg,
-          Switzerland and a research associate at the Department of
-          Biological and Environmental Sciences and Gothenburg Global
-          Biodiversity Centre at Gothenburg University.`,
+          bio: `Daniele Silvestro is a computational biologist at ETH Zurich,
+          Switzerland and a research associate at Gothenburg University, Sweden.`,
         },
 
         {
