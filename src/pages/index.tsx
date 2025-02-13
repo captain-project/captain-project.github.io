@@ -9,8 +9,10 @@ import {
   HStack,
   VStack,
   Link,
+  Container,
 } from "@chakra-ui/react";
 import { DownloadIcon } from "@chakra-ui/icons";
+import Figures from "../components/Figures";
 
 export default function Home() {
   return (
@@ -156,7 +158,46 @@ export default function Home() {
               </VStack>
             </HStack>
           </Box>
+        </SimpleGrid>
 
+        <Container
+          as="article"
+          mt={32}
+          // mx={0}
+          maxWidth={{ base: "60ch", lg: "120ch" }}
+          display="flex"
+          alignItems="flex-start"
+          justifyContent="flex-start"
+        >
+          <Box>
+            <Heading as="h2" size="xl" mt={12}>
+              A simulated natural system
+            </Heading>
+            <Text mt={8}>
+              CAPTAIN uses simulations based on an individual-based spatially
+              explicit model of biodiversity to train policies through
+              Reinforcement Learning. The simulations can include hundreds of
+              species and millions of individuals and tracks global and local
+              biodiversity changes resulting from natural processes of
+              mortality, replacement and dispersal and from changes in
+              anthropogenic pressure and climate. Simlated systems are used to
+              train models that can be then applied to empirical data and to
+              becnhmark the outcome of different conservation policies and
+              targets.
+            </Text>
+          </Box>
+        </Container>
+
+        <Figures />
+
+        <SimpleGrid
+          as="article"
+          columns={{ base: 1, lg: 2 }}
+          spacing={"8rem"}
+          mx="auto"
+          px="1rem"
+          maxWidth={{ base: "60ch", lg: "120ch" }}
+        >
           <Box>
             <Heading as="h2" size="xl" id="download">
               Download

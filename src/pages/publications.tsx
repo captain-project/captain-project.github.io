@@ -1,31 +1,65 @@
-import { Container, Box, Heading, Link, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Box,
+  Heading,
+  Link,
+  Text,
+  Image,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import Figures from "../components/Figures";
 
 export default function Supplementary() {
   return (
     <Box as="main" pt="200">
-      <Container as="article">
-        <Heading as="h2" size="xl">
-          Improving biodiversity protection through artificial intelligence
-        </Heading>
-        <Heading as="h3" size="sm" my={6}>
-          Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022) Nature Sustainability, DOI:  
-          <Link
-          href="https://www.nature.com/articles/s41893-022-00851-6"
-          isExternal
-        >
-          10.1038/s41893-022-00851-6 <ExternalLinkIcon mx="2px" mt="-2px" />
-        </Link>
-        </Heading>
-        <Link
-          href="papers/Silvestro_et_al_2022_NatSust.pdf"
-          isExternal
-        >
-          Download open access article: <ExternalLinkIcon mx="2px" mt="-2px" />
-        </Link>
+      <SimpleGrid
+        as="article"
+        columns={{ base: 1, lg: 2 }}
+        spacing={"8rem"}
+        mx="auto"
+        px="1rem"
+        mb={100}
+        maxWidth={{ base: "60ch", lg: "120ch" }}
+      >
+        <Box>
+          <Heading as="h2" size="xl">
+            Improving biodiversity protection through artificial intelligence
+          </Heading>
+          <Heading as="h3" size="sm" my={6}>
+            Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022)
+            Nature Sustainability, DOI:
+            <Link
+              href="https://www.nature.com/articles/s41893-022-00851-6"
+              isExternal
+            >
+              10.1038/s41893-022-00851-6 <ExternalLinkIcon mx="2px" mt="-2px" />
+            </Link>
+          </Heading>
+          <Link href="papers/Silvestro_et_al_2022_NatSust.pdf" isExternal>
+            Download open access article:{" "}
+            <ExternalLinkIcon mx="2px" mt="-2px" />
+          </Link>
+        </Box>
+        <Box>
+          <Image src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41893-022-00851-6/MediaObjects/41893_2022_851_Fig1_HTML.png?as=webp" />
+        </Box>
+        <Box>
+          <Heading as="h2" size="xl">
+            Using artificial intelligence to optimize ecological restoration for
+            climate and biodiversity
+          </Heading>
+          <Heading as="h3" size="sm" my={6}>
+            Silvestro, D., Goria, S., Groom, B., Sterner, T., and Antonelli, A.
+            (2025) bioRxiv, DOI:
+            <Link href="https://doi.org/10.1101/2025.01.31.635975" isExternal>
+              10.1101/2025.01.31.635975 <ExternalLinkIcon mx="2px" mt="-2px" />
+            </Link>
+          </Heading>
+        </Box>
+        <Box></Box>
+      </SimpleGrid>
 
-        {/* <Heading as="h3" size="md" mt={12}>
+      {/* <Heading as="h3" size="md" mt={12}>
           Abstract
         </Heading>
 
@@ -64,24 +98,6 @@ export default function Supplementary() {
           biological and ecosystem values in a rapidly changing and
           resource-limited world.
         </Text> */}
-
-        <Heading as="h3" size="md" mt={12}>
-          A simulated natural system
-        </Heading>
-         <Text mt={8}>
-          CAPTAIN uses simulations based on an individual-based spatially
-           explicit model of biodiversity to train policies through 
-           Reinforcement Learning. The simulations can include hundreds of
-           species and millions of individuals and tracks global and local
-           biodiversity changes resulting from natural processes of mortality,
-           replacement and dispersal and from changes in anthropogenic 
-           pressure and climate. Simlated systems are used to train models that
-           can be then applied to empirical data and to becnhmark the outcome
-           of different conservation policies and targets. 
-         </Text>
-      </Container>
-
-      <Figures />
     </Box>
   );
 }
