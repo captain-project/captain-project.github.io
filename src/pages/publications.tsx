@@ -56,6 +56,9 @@ export default function Supplementary() {
             </Link>
           </Heading>
         </Box>
+        <Box>
+          <Image src="/images/one_sim.png" />
+        </Box>
         <Box></Box>
       </SimpleGrid>
 
