@@ -10,8 +10,12 @@ import {
   VStack,
   Link,
   Container,
+  List,
+  ListItem,
+  ListIcon,
 } from "@chakra-ui/react";
-import { DownloadIcon } from "@chakra-ui/icons";
+// import { DownloadIcon, InfoIcon } from "@chakra-ui/icons";
+import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
 export default function Home() {
@@ -19,9 +23,10 @@ export default function Home() {
     <>
       <Box
         as="section"
-        bgImage="/images/pexels-photo-2606532.jpeg"
+        // bgImage="/images/pexels-photo-2606532m.png"
+        bgImage="/images/dscr.jpg"
         bgSize="cover"
-        h="100vh"
+        h="60vh"
         w="100%"
         p={2}
       >
@@ -33,15 +38,18 @@ export default function Home() {
           mt={20}
           gap={10}
         >
-          <Heading
-            as="h2"
-            size="3xl"
-            letterSpacing="tight"
-            color="#F6F8EA"
-            textShadow="1px 1px 3px #0F2935"
-          >
-            The Captain Project
-          </Heading>
+        <Heading
+          as="h1" // Changed to h1 for SEO best practices as it's the main title
+          size="2xl" // Slightly smaller size to accommodate the longer text
+          letterSpacing="tight"
+          color="#F6F8EA"
+          textShadow="1px 1px 3px #0F2935"
+          textAlign="center"
+          maxW="30ch" // Limits width to approximately 20 characters
+          mx="auto"   // Centers the box within the Flex container
+        >
+          Spatial conservation and restoration planning using reinforcement learning
+        </Heading>
 
           <Link href="https://github.com/captain-project">
             <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
@@ -50,8 +58,68 @@ export default function Home() {
           </Link>
         </Flex>
       </Box>
-
+      
+      //
+      
+      
+      
       <Box as="main" py={20}>
+          
+<Container maxW={{ base: "60ch", lg: "120ch" }} mb={20}>
+  <Box 
+    p={8} 
+    borderRadius="xl" 
+    bg="#F6F8EA"           // The light cream color from your heading
+    color="#0F2935"       // The dark teal color for text readability
+    borderWidth="1px" 
+    borderColor="#d1d5bc" // A slightly darker shade of the cream for the border
+    boxShadow="md"
+  >
+    <Heading as="h2" size="xl" color="#0F2935" mb={6}>
+      CAPTAIN 3.0 is coming
+    </Heading>
+    
+    <List spacing={4} fontSize="lg">
+      <ListItem display="flex" alignItems="start">
+        <ListIcon as={RepeatIcon} color="teal.600" mt={1} />
+        <Box>
+          <Text as="strong" color="teal.800">Complete rewrite for high performance:</Text> 
+          {" "}Significant efficiency improvements and <strong>full GPU support</strong> enable 
+          conservation analysis at larger scales and finer resolutions.
+        </Box>
+      </ListItem>
+
+      <ListItem display="flex" alignItems="start">
+        <ListIcon as={SettingsIcon} color="teal.600" mt={1} />
+        <Box>
+          <Text as="strong" color="teal.800">Modular & Customizable:</Text> 
+          {" "}A flexible framework allowing for highly tailored conservation policies 
+          and easier integration of custom data.
+        </Box>
+      </ListItem>
+
+      <ListItem display="flex" alignItems="start">
+        <ListIcon as={SearchIcon} color="teal.600" mt={1} />
+        <Box>
+          <Text as="strong" color="teal.800">Multi-objective optimization:</Text> 
+          {" "}Full support to quantify synergies and trade-offs between competing 
+          conservation and restoration targets.
+        </Box>
+      </ListItem>
+
+      <ListItem display="flex" alignItems="start">
+        <ListIcon as={CheckIcon} color="teal.600" mt={1} />
+        <Box>
+          <Text as="strong" color="teal.800">Enhanced Documentation:</Text> 
+          {" "}Comprehensive technical guides and examples to streamline 
+          the implementation of complex workflows.
+        </Box>
+      </ListItem>
+    </List>
+  </Box>
+</Container>
+
+
         <SimpleGrid
           as="article"
           columns={{ base: 1, lg: 2 }}
@@ -61,11 +129,10 @@ export default function Home() {
           maxWidth={{ base: "60ch", lg: "120ch" }}
         >
           <Box>
-            <Heading as="h2" size="xl" id="download">
+            <Heading as="h2" size="xl">
               How do we best protect biodiversity in a rapidly changing world
               and with limited resources?
             </Heading>
-
             <Text mt={8}>
               Over a million species face extinction, carrying with them untold
               options for food medicine, fibre, shelter, ecological resilience,
@@ -82,12 +149,10 @@ export default function Home() {
               borderRadius="xl"
             />
           </Box>
-
           <Box>
-            <Heading as="h2" size="xl" id="download">
+            <Heading as="h2" size="xl">
               Harnessing the power of AI to optimize conservation efforts
             </Heading>
-
             <Text mt={8}>
               We use reinforcement learning to train models for conservation
               prioritization that best use the available data and resources.
@@ -102,88 +167,21 @@ export default function Home() {
               alt="Captain flow"
             />
           </Box>
-
-          <Box>
-            <Heading as="h2" size="xl" id="download">
-              Conservation policies outperforming the state-of-the-art
-            </Heading>
-
-            <Text mt={8}>
-              Our experiments using simulated and empirical data indicate that
-              CAPTAIN yields more reliable conservation solutions than
-              alternative state-of-the-art software for systematic conservation
-              planning.
-            </Text>
-          </Box>
-          <Box>
-            <Image
-              src="/images/performance.png"
-              alt="Captain vs Marxan performance"
-            />
-          </Box>
-
-          <Box>
-            <Heading as="h2" size="xl" id="download">
-              Customized prioritization targets
-            </Heading>
-
-            <Text mt={8}>
-              Optimize policies toward different conservation targets, e.g.
-              aiming to minimize species loss or to maximize the amount of
-              protected area, and compare their outcomes and tradeoffs.
-            </Text>
-          </Box>
-          <Box textAlign="center" fontSize="sm">
-            <HStack spacing={4} align="start">
-              <VStack w="30%">
-                <Image
-                  src="/images/min-species-loss.png"
-                  alt="Minimize species loss"
-                />
-                <Text as="figcaption">Minimize species loss</Text>
-              </VStack>
-              <VStack w="30%">
-                <Image
-                  src="/images/max-carbon-storage.png"
-                  alt="Maximize carbon storage"
-                />
-                <Text as="figcaption">Minimize economic value loss</Text>
-              </VStack>
-              <VStack w="30%">
-                <Image
-                  src="/images/max-protected-area.png"
-                  alt="Maximize protected area"
-                />
-                <Text as="figcaption">Maximize protected area</Text>
-              </VStack>
-            </HStack>
-          </Box>
         </SimpleGrid>
 
         <Container
           as="article"
           mt={32}
-          // mx={0}
           maxWidth={{ base: "60ch", lg: "120ch" }}
-          display="flex"
-          alignItems="flex-start"
-          justifyContent="flex-start"
         >
           <Box>
-            <Heading as="h2" size="xl" mt={12}>
+            <Heading as="h2" size="xl">
               A simulated natural system
             </Heading>
             <Text mt={8}>
               CAPTAIN uses simulations based on an individual-based spatially
               explicit model of biodiversity to train policies through
-              Reinforcement Learning. The simulations can include hundreds of
-              species and millions of individuals and tracks global and local
-              biodiversity changes resulting from natural processes of
-              mortality, replacement and dispersal and from changes in
-              anthropogenic pressure and climate. Simlated systems are used to
-              train models that can be then applied to empirical data and to
-              becnhmark the outcome of different conservation policies and
-              targets.
+              Reinforcement Learning.
             </Text>
           </Box>
         </Container>
@@ -196,6 +194,7 @@ export default function Home() {
           spacing={"8rem"}
           mx="auto"
           px="1rem"
+          mt={20}
           maxWidth={{ base: "60ch", lg: "120ch" }}
         >
           <Box>
@@ -203,27 +202,15 @@ export default function Home() {
               Download
             </Heading>
             <Text mt={5}>
-              A desktop app is coming soon. The Python source code is available
-              on <a href="//github.com/captain-project/captain">GitHub</a>.
-            </Text>
-            <Text mt={5}>
-              We provide{" "}
-              <a href="//github.com/captain-project/notebooks">
-                Jupyter Notebooks
-              </a>{" "}
-              that showcase the capabilities of Captain.
+              CAPTAIN v.2 is available on <a href="//github.com/captain-project/captain2">GitHub</a>.
             </Text>
           </Box>
           <Box>
-            <Heading as="h2" size="xl" id="download">
+            <Heading as="h2" size="xl">
               Join the community
             </Heading>
             <Text mt={5}>
-              Ask questions and get help on{" "}
-              <a href="//github.com/captain-project/captain/discussions">
-                GitHub Discussions
-              </a>
-              .
+              Ask questions on <a href="//github.com/captain-project/captain/discussions">GitHub Discussions</a>.
             </Text>
           </Box>
         </SimpleGrid>
