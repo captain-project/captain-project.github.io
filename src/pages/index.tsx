@@ -15,7 +15,7 @@ import {
   ListIcon,
 } from "@chakra-ui/react";
 // import { DownloadIcon, InfoIcon } from "@chakra-ui/icons";
-import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon } from "@chakra-ui/icons";
+import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
 export default function Home() {
@@ -67,15 +67,16 @@ export default function Home() {
 <Container maxW={{ base: "60ch", lg: "120ch" }} mb={20}>
   <Box 
     p={8} 
+    px={{ base: 6, md: 20 }}
     borderRadius="xl" 
-    bg="#F6F8EA"           // The light cream color from your heading
-    color="#0F2935"       // The dark teal color for text readability
+    bg="#F6F8EA"           
+    color="#0F2935"       
     borderWidth="1px" 
-    borderColor="#d1d5bc" // A slightly darker shade of the cream for the border
+    borderColor="#d1d5bc" 
     boxShadow="md"
   >
     <Heading as="h2" size="xl" color="#0F2935" mb={6}>
-      CAPTAIN 3.0 is coming
+      CAPTAIN 3 is coming
     </Heading>
     
     <List spacing={4} fontSize="lg">
@@ -83,8 +84,17 @@ export default function Home() {
         <ListIcon as={RepeatIcon} color="teal.600" mt={1} />
         <Box>
           <Text as="strong" color="teal.800">Complete rewrite for high performance:</Text> 
-          {" "}Significant efficiency improvements and <strong>full GPU support</strong> enable 
-          conservation analysis at larger scales and finer resolutions.
+          {" "}Significant efficiency improvements and full GPU support enable 
+          analysis at larger scales and finer resolutions.
+        </Box>
+      </ListItem>
+
+      <ListItem display="flex" alignItems="start">
+        <ListIcon as={TimeIcon} color="teal.600" mt={1} />
+        <Box>
+          <Text as="strong" color="teal.800">Dynamic environment scenarios:</Text> 
+          {" "}Advanced support for time-evolving scenarios, incorporating 
+           climate change projections and dynamic implementation costs.
         </Box>
       </ListItem>
 
