@@ -76,7 +76,7 @@ export default function Home() {
     boxShadow="md"
   >
     <Heading as="h2" size="xl" color="#0F2935" mb={6}>
-      CAPTAIN 3 is coming
+      CAPTAIN 3.0 is coming
     </Heading>
     
     <List spacing={4} fontSize="lg">
