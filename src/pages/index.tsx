@@ -59,11 +59,10 @@ export default function Home() {
         </Flex>
       </Box>
       
-      //
+
       
       
-      
-      <Box as="main" py={20}>
+      <Box as="main" py={10}>
           
 <Container maxW={{ base: "60ch", lg: "120ch" }} mb={20}>
   <Box 
