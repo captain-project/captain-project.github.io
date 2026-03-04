@@ -14,7 +14,7 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-// import { DownloadIcon, InfoIcon } from "@chakra-ui/icons";
+// import { DownloadIcon, InfoIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
@@ -51,11 +51,20 @@ export default function Home() {
           Spatial conservation and restoration planning using reinforcement learning
         </Heading>
 
-          <Link href="https://github.com/captain-project">
-            <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-              Download
-            </Button>
-          </Link>
+<HStack spacing={4} justify="center">
+  <Link href="https://github.com/captain-project/captain3preview" isExternal>
+    <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
+      Try Captain 3 Preview
+    </Button>
+  </Link>
+
+  <Link href="https://github.com/captain-project/captain2" isExternal>
+    <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
+      Download v.2
+    </Button>
+  </Link>
+</HStack>
+
         </Flex>
       </Box>
       
@@ -126,6 +135,9 @@ export default function Home() {
       </ListItem>
     </List>
   </Box>
+
+
+
 </Container>
 
 
