@@ -162,8 +162,8 @@ export default function Home() {
 			  />
 			  <Box>
 				<Text as="strong" color="teal.800">Decentralized regional agents:</Text> 
-				{" "}Features dedicated regional agents designed to deploy, optimize, 
-				and scale spatially distributed conservation strategies seamlessly.
+				{" "}Features regional agents designed to optimize 
+				spatially-distributed conservation strategies.
 			  </Box>
 			</ListItem>
               
