@@ -155,13 +155,14 @@ export default function Home() {
 			  <ListIcon 
 				as={AppleStyleBotIcon} 
 				color="teal.600" 
-				boxSize="1.2em" 
-				minW="1em"    // Forces the icon container size to match its boxSize
-				mr={1}          // Adjusts the right margin to push the text exactly back into place
+				boxSize="1.25em" 
+				minW="1.25em"    
+				ml="-3px"      
+				mr="7px"       
 				mt="2px"        
 			  />
 			  <Box>
-				<Text as="strong" color="teal.800">Decentralized regional agents:</Text> 
+  				<Text as="strong" color="teal.800">Decentralized regional agents:</Text> 
 				{" "}Features regional agents designed to optimize 
 				spatially-distributed conservation strategies.
 			  </Box>
