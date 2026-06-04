@@ -14,16 +14,63 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-// import { DownloadIcon, InfoIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
+
+// Place this at the top of your file, right under your imports:
+const RobotIcon = (props: any) => (
+  <svg
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    fill="none"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="1em"
+    height="1em"
+    {...props}
+  >
+    <rect x="3" y="11" width="18" height="10" rx="2" />
+    <circle cx="12" cy="5" r="2" />
+    <path d="M12 7v4" />
+    <line x1="8" y1="16" x2="8" y2="16.01" />
+    <line x1="16" y1="16" x2="16" y2="16.01" />
+    <path d="M9 2v3" />
+    <path d="M15 2v3" />
+  </svg>
+);
+
+const AppleStyleBotIcon = (props: any) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="1em"
+    height="1em"
+    {...props}
+  >
+    <path d="M12 6V2" />
+    <circle cx="12" cy="2" r="1" fill="currentColor" />
+    
+    <rect x="4" y="6" width="16" height="14" rx="3" />
+    
+    <path d="M2 11h2M20 11h2" />
+    
+    <circle cx="8.5" cy="11.5" r="1.5" fill="currentColor" />
+    <circle cx="15.5" cy="11.5" r="1.5" fill="currentColor" />
+    
+    <rect x="8" y="15" width="8" height="2" rx="1" />
+  </svg>
+);
 
 export default function Home() {
   return (
     <>
       <Box
         as="section"
-        // bgImage="/images/pexels-photo-2606532m.png"
         bgImage="/images/dscr-lr.jpg"
         bgSize="cover"
         h="60vh"
@@ -38,108 +85,117 @@ export default function Home() {
           mt={20}
           gap={10}
         >
-        <Heading
-          as="h1" // Changed to h1 for SEO best practices as it's the main title
-          size="2xl" // Slightly smaller size to accommodate the longer text
-          letterSpacing="tight"
-          color="#F6F8EA"
-          textShadow="1px 1px 3px #0F2935"
-          textAlign="center"
-          maxW="30ch" // Limits width to approximately 20 characters
-          mx="auto"   // Centers the box within the Flex container
-        >
-          Spatial conservation and restoration planning using reinforcement learning
-        </Heading>
+          <Heading
+            as="h1" 
+            size="2xl" 
+            letterSpacing="tight"
+            color="#F6F8EA"
+            textShadow="1px 1px 3px #0F2935"
+            textAlign="center"
+            maxW="30ch" 
+            mx="auto"   
+          >
+            Spatial conservation and restoration planning using reinforcement learning
+          </Heading>
 
-<HStack spacing={4} justify="center">
-  <Link href="https://github.com/captain-project/captain3preview" isExternal>
-    <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-      Try Captain 3 Preview
-    </Button>
-  </Link>
+          <HStack spacing={4} justify="center">
+            <Link href="https://github.com/captain-project/captain3preview" isExternal>
+              <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
+                Try Captain 3 Preview
+              </Button>
+            </Link>
 
-  <Link href="https://github.com/captain-project/captain2" isExternal>
-    <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-      Download v.2
-    </Button>
-  </Link>
-</HStack>
-
+            <Link href="https://github.com/captain-project/captain2" isExternal>
+              <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
+                Download v.2
+              </Button>
+            </Link>
+          </HStack>
         </Flex>
       </Box>
       
-
-      
-      
       <Box as="main" py={10}>
           
-<Container maxW={{ base: "60ch", lg: "120ch" }} mb={20}>
-  <Box 
-    p={8} 
-    px={{ base: 6, md: 20 }}
-    borderRadius="xl" 
-    bg="#F6F8EA"           
-    color="#0F2935"       
-    borderWidth="1px" 
-    borderColor="#d1d5bc" 
-    boxShadow="md"
-  >
-    <Heading as="h2" size="xl" color="#0F2935" mb={6}>
-      CAPTAIN 3.0 is coming
-    </Heading>
-    
-    <List spacing={4} fontSize="lg">
-      <ListItem display="flex" alignItems="start">
-        <ListIcon as={RepeatIcon} color="teal.600" mt={1} />
-        <Box>
-          <Text as="strong" color="teal.800">Complete rewrite for high performance:</Text> 
-          {" "}Significant efficiency improvements and full GPU support enable 
-          analysis at larger scales and finer resolutions.
-        </Box>
-      </ListItem>
+        <Container maxW={{ base: "60ch", lg: "120ch" }} mb={20}>
+          <Box 
+            p={8} 
+            px={{ base: 6, md: 20 }}
+            borderRadius="xl" 
+            bg="#F6F8EA"           
+            color="#0F2935"       
+            borderWidth="1px" 
+            borderColor="#d1d5bc" 
+            boxShadow="md"
+          >
+            <Heading as="h2" size="xl" color="#0F2935" mb={6}>
+              CAPTAIN 3.0 is coming
+            </Heading>
+            
+            <List spacing={4} fontSize="lg">
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={RepeatIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Complete rewrite for high performance:</Text> 
+                  {" "}Significant efficiency improvements and full GPU support enable 
+                  analysis at larger scales and finer resolutions.
+                </Box>
+              </ListItem>
 
-      <ListItem display="flex" alignItems="start">
-        <ListIcon as={TimeIcon} color="teal.600" mt={1} />
-        <Box>
-          <Text as="strong" color="teal.800">Dynamic environment scenarios:</Text> 
-          {" "}Advanced support for time-evolving scenarios, incorporating 
-           climate change projections and dynamic implementation costs.
-        </Box>
-      </ListItem>
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={TimeIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Dynamic environment scenarios:</Text> 
+                  {" "}Advanced support for time-evolving scenarios, incorporating 
+                   climate change projections and dynamic implementation costs.
+                </Box>
+              </ListItem>
 
-      <ListItem display="flex" alignItems="start">
-        <ListIcon as={SettingsIcon} color="teal.600" mt={1} />
-        <Box>
-          <Text as="strong" color="teal.800">Modular & Customizable:</Text> 
-          {" "}A flexible framework allowing for highly tailored conservation policies 
-          and easier integration of custom data.
-        </Box>
-      </ListItem>
+              {/* New Addition: Spatially Distributed Regional Agents */}
+			<ListItem display="flex" alignItems="start">
+			  <ListIcon 
+				as={AppleStyleBotIcon} 
+				color="teal.600" 
+				boxSize="1.2em" 
+				minW="1em"    // Forces the icon container size to match its boxSize
+				mr={1}          // Adjusts the right margin to push the text exactly back into place
+				mt="2px"        
+			  />
+			  <Box>
+				<Text as="strong" color="teal.800">Decentralized regional agents:</Text> 
+				{" "}Features dedicated regional agents designed to deploy, optimize, 
+				and scale spatially distributed conservation strategies seamlessly.
+			  </Box>
+			</ListItem>
+              
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={SearchIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Multi-objective optimization:</Text> 
+                  {" "}Full support to quantify synergies and trade-offs between competing 
+                  conservation and restoration targets.
+                </Box>
+              </ListItem>
 
-      <ListItem display="flex" alignItems="start">
-        <ListIcon as={SearchIcon} color="teal.600" mt={1} />
-        <Box>
-          <Text as="strong" color="teal.800">Multi-objective optimization:</Text> 
-          {" "}Full support to quantify synergies and trade-offs between competing 
-          conservation and restoration targets.
-        </Box>
-      </ListItem>
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={SettingsIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Modular & Customizable:</Text> 
+                  {" "}A flexible framework allowing for highly tailored conservation policies 
+                  and easier integration of custom data.
+                </Box>
+              </ListItem>
 
-      <ListItem display="flex" alignItems="start">
-        <ListIcon as={CheckIcon} color="teal.600" mt={1} />
-        <Box>
-          <Text as="strong" color="teal.800">Enhanced Documentation:</Text> 
-          {" "}Comprehensive technical guides and examples to streamline 
-          the implementation of complex workflows.
-        </Box>
-      </ListItem>
-    </List>
-  </Box>
-
-
-
-</Container>
-
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={CheckIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Enhanced Documentation:</Text> 
+                  {" "}Comprehensive technical guides and examples to streamline 
+                  the implementation of complex workflows.
+                </Box>
+              </ListItem>
+            </List>
+          </Box>
+        </Container>
 
         <SimpleGrid
           as="article"
