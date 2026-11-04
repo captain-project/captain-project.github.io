@@ -6,7 +6,7 @@ import {
   Flex,
   SimpleGrid,
   Image,
-  HStack,
+  Stack,
   VStack,
   Link,
   Container,
@@ -14,7 +14,7 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon } from "@chakra-ui/icons";
+import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon, LinkIcon, StarIcon, ViewIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
 // Place this at the top of your file, right under your imports:
@@ -73,9 +73,12 @@ export default function Home() {
         as="section"
         bgImage="/images/dscr-lr.jpg"
         bgSize="cover"
-        h="60vh"
+        h={{ base: "auto", md: "60vh" }}
+        minH="60vh"
         w="100%"
         p={2}
+        pt={{ base: 20, md: 2 }}
+        pb={{ base: 8, md: 2 }}
       >
         <Flex
           h="100%"
@@ -98,10 +101,15 @@ export default function Home() {
             Spatial conservation and restoration planning using reinforcement learning
           </Heading>
 
-          <HStack spacing={4} justify="center">
-            <Link href="https://github.com/captain-project/captain3preview" isExternal>
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            spacing={4}
+            justify="center"
+            align="center"
+          >
+            <Link href="https://github.com/captain-project/captain3" isExternal>
               <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-                Try Captain 3 Preview
+                Try CAPTAIN 3 (release candidate)
               </Button>
             </Link>
 
@@ -110,7 +118,7 @@ export default function Home() {
                 Download v.2
               </Button>
             </Link>
-          </HStack>
+          </Stack>
         </Flex>
       </Box>
       
@@ -127,9 +135,16 @@ export default function Home() {
             borderColor="#d1d5bc" 
             boxShadow="md"
           >
-            <Heading as="h2" size="xl" color="#0F2935" mb={6}>
-              CAPTAIN 3.0 is coming
+            <Heading as="h2" size="xl" color="#0F2935" mb={4}>
+              CAPTAIN 3.0 release candidate
             </Heading>
+            <Text fontSize="lg" mb={6}>
+              The first release candidate, 3.0.0rc1, is available on{" "}
+              <Link href="https://github.com/captain-project/captain3" color="teal.700" isExternal>
+                GitHub
+              </Link>
+              , with a quick start, tutorials and example data.
+            </Text>
             
             <List spacing={4} fontSize="lg">
               <ListItem display="flex" alignItems="start">
@@ -187,11 +202,37 @@ export default function Home() {
               </ListItem>
 
               <ListItem display="flex" alignItems="start">
+                <ListIcon as={LinkIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Edge effects and connectivity:</Text>
+                  {" "}Disturbance can spill over into the borders of protected areas, and
+                  connectivity rewards link reserves into networks.
+                </Box>
+              </ListItem>
+
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={StarIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Species-level objectives:</Text>
+                  {" "}Reward the protected share of each species, the worst-served species
+                  or any spatial layer, and shift objectives during training.
+                </Box>
+              </ListItem>
+
+              <ListItem display="flex" alignItems="start">
+                <ListIcon as={ViewIcon} color="teal.600" mt={1} />
+                <Box>
+                  <Text as="strong" color="teal.800">Google Earth export:</Text>
+                  {" "}Export protection plans as KMZ maps to view them on satellite imagery.
+                </Box>
+              </ListItem>
+
+              <ListItem display="flex" alignItems="start">
                 <ListIcon as={CheckIcon} color="teal.600" mt={1} />
                 <Box>
-                  <Text as="strong" color="teal.800">Enhanced Documentation:</Text> 
-                  {" "}Comprehensive technical guides and examples to streamline 
-                  the implementation of complex workflows.
+                  <Text as="strong" color="teal.800">Enhanced Documentation:</Text>
+                  {" "}A quick start, step-by-step tutorials and example scripts, from a
+                  small toy dataset to advanced setups.
                 </Box>
               </ListItem>
             </List>
@@ -280,6 +321,10 @@ export default function Home() {
               Download
             </Heading>
             <Text mt={5}>
+              CAPTAIN v.3 (release candidate 3.0.0rc1) is available on{" "}
+              <a href="//github.com/captain-project/captain3">GitHub</a>.
+            </Text>
+            <Text mt={2}>
               CAPTAIN v.2 is available on <a href="//github.com/captain-project/captain2">GitHub</a>.
             </Text>
           </Box>
@@ -288,7 +333,7 @@ export default function Home() {
               Join the community
             </Heading>
             <Text mt={5}>
-              Ask questions on <a href="//github.com/captain-project/captain/discussions">GitHub Discussions</a>.
+              Ask questions on <a href="//github.com/captain-project/captain-project/discussions">GitHub Discussions</a>.
             </Text>
           </Box>
         </SimpleGrid>
