@@ -64,7 +64,7 @@ export default function Header() {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://github.com/captain-project/">
+              <Link href="https://github.com/captain-project/captain3">
                 <a>Download</a>
               </Link>
             </ListItem>

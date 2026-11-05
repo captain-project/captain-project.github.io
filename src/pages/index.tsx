@@ -13,8 +13,12 @@ import {
   List,
   ListItem,
   ListIcon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon, LinkIcon, StarIcon, ViewIcon } from "@chakra-ui/icons";
+import { DownloadIcon, InfoIcon, SettingsIcon, RepeatIcon, SearchIcon, CheckIcon, TimeIcon, LinkIcon, StarIcon, ViewIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Figures from "../components/Figures";
 
 // Place this at the top of your file, right under your imports:
@@ -107,17 +111,73 @@ export default function Home() {
             justify="center"
             align="center"
           >
-            <Link href="https://github.com/captain-project/captain3" isExternal>
-              <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-                Try CAPTAIN 3 (release candidate)
+            <Link
+              href="https://github.com/captain-project/captain3"
+              isExternal
+              _hover={{ textDecoration: "none" }}
+            >
+              <Button
+                size="lg"
+                w={{ base: "15rem", md: "auto" }}
+                bg="white"
+                color="#0F2935"
+                _hover={{ bg: "#F6F8EA" }}
+                leftIcon={<DownloadIcon />}
+              >
+                Get CAPTAIN 3
               </Button>
             </Link>
 
-            <Link href="https://github.com/captain-project/captain2" isExternal>
-              <Button bg="white" variant="solid" leftIcon={<DownloadIcon />}>
-                Download v.2
+            <Link
+              href="https://github.com/captain-project/captain3/blob/main/docs/quickstart.md"
+              isExternal
+              _hover={{ textDecoration: "none" }}
+            >
+              <Button
+                size="lg"
+                w={{ base: "15rem", md: "auto" }}
+                bg="white"
+                color="#0F2935"
+                _hover={{ bg: "#F6F8EA" }}
+              >
+                Quick start
               </Button>
             </Link>
+
+            <Menu>
+              <MenuButton
+                as={Button}
+                size="lg"
+                w={{ base: "15rem", md: "auto" }}
+                variant="outline"
+                color="white"
+                borderColor="whiteAlpha.800"
+                bg="blackAlpha.500"
+                _hover={{ bg: "blackAlpha.700" }}
+                _active={{ bg: "blackAlpha.700" }}
+                rightIcon={<ChevronDownIcon />}
+              >
+                Legacy versions
+              </MenuButton>
+              <MenuList color="#0F2935">
+                <MenuItem
+                  as="a"
+                  href="https://github.com/captain-project/captain2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CAPTAIN v.2
+                </MenuItem>
+                <MenuItem
+                  as="a"
+                  href="https://github.com/captain-project/captain-project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CAPTAIN v.1
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Stack>
         </Flex>
       </Box>
@@ -136,16 +196,39 @@ export default function Home() {
             boxShadow="md"
           >
             <Heading as="h2" size="xl" color="#0F2935" mb={4}>
-              CAPTAIN 3.0 release candidate
+              CAPTAIN 3 is here
             </Heading>
             <Text fontSize="lg" mb={6}>
-              The first release candidate, 3.0.0rc1, is available on{" "}
-              <Link href="https://github.com/captain-project/captain3" color="teal.700" isExternal>
-                GitHub
+              The new CAPTAIN (v.3.0.0rc1) is available, with a{" "}
+              <Link
+                href="https://github.com/captain-project/captain3/blob/main/docs/quickstart.md"
+                color="teal.700"
+                textDecoration="underline"
+                isExternal
+              >
+                quick start
               </Link>
-              , with a quick start, tutorials and example data.
+              ,{" "}
+              <Link
+                href="https://github.com/captain-project/captain3/tree/main/tutorials"
+                color="teal.700"
+                textDecoration="underline"
+                isExternal
+              >
+                tutorials
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="https://polybox.ethz.ch/index.php/s/qYTHM7difqrBmo4"
+                color="teal.700"
+                textDecoration="underline"
+                isExternal
+              >
+                example data
+              </Link>
+              .
             </Text>
-            
+
             <List spacing={4} fontSize="lg">
               <ListItem display="flex" alignItems="start">
                 <ListIcon as={RepeatIcon} color="teal.600" mt={1} />
@@ -201,6 +284,7 @@ export default function Home() {
                 </Box>
               </ListItem>
 
+              {/* Hidden for now, to be emphasized in a later update
               <ListItem display="flex" alignItems="start">
                 <ListIcon as={LinkIcon} color="teal.600" mt={1} />
                 <Box>
@@ -226,6 +310,7 @@ export default function Home() {
                   {" "}Export protection plans as KMZ maps to view them on satellite imagery.
                 </Box>
               </ListItem>
+              */}
 
               <ListItem display="flex" alignItems="start">
                 <ListIcon as={CheckIcon} color="teal.600" mt={1} />
@@ -321,11 +406,14 @@ export default function Home() {
               Download
             </Heading>
             <Text mt={5}>
-              CAPTAIN v.3 (release candidate 3.0.0rc1) is available on{" "}
-              <a href="//github.com/captain-project/captain3">GitHub</a>.
+              CAPTAIN 3 is available on{" "}
+              <a href="//github.com/captain-project/captain3">GitHub</a>, where the README
+              explains how to install it.
             </Text>
             <Text mt={2}>
-              CAPTAIN v.2 is available on <a href="//github.com/captain-project/captain2">GitHub</a>.
+              Legacy versions remain available:{" "}
+              <a href="//github.com/captain-project/captain2">CAPTAIN v.2</a> and{" "}
+              <a href="//github.com/captain-project/captain-project">CAPTAIN v.1</a>.
             </Text>
           </Box>
           <Box>
