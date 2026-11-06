@@ -1,13 +1,24 @@
 import {
   Container,
   Box,
+  Button,
   Heading,
   Link,
   Text,
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { DownloadIcon } from "@chakra-ui/icons";
+
+function DownloadButton({ href }: { href: string }) {
+  return (
+    <Link href={href} isExternal _hover={{ textDecoration: "none" }}>
+      <Button size="sm" colorScheme="teal" leftIcon={<DownloadIcon />}>
+        Download paper
+      </Button>
+    </Link>
+  );
+}
 
 export default function Supplementary() {
   return (
@@ -23,23 +34,14 @@ export default function Supplementary() {
       >
         {/* Paper 1 */}
         <Box>
-          <Heading as="h2" size="xl">
+          <Heading as="h2" size="lg">
             Improving biodiversity protection through artificial intelligence
           </Heading>
           <Heading as="h3" size="sm" my={6}>
             Silvestro, D., Goria, S., Sterner, T., and Antonelli, A. (2022)
-            Nature Sustainability, DOI:
-            <Link
-              href="https://www.nature.com/articles/s41893-022-00851-6"
-              isExternal
-            >
-              {" "}10.1038/s41893-022-00851-6 <ExternalLinkIcon mx="2px" mt="-2px" />
-            </Link>
+            Nature Sustainability
           </Heading>
-          <Link href="papers/Silvestro_et_al_2022_NatSust.pdf" isExternal>
-            Download open access article:{" "}
-            <ExternalLinkIcon mx="2px" mt="-2px" />
-          </Link>
+          <DownloadButton href="papers/Silvestro_et_al_2022_NatSust.pdf" />
         </Box>
         <Box>
           <Image src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41893-022-00851-6/MediaObjects/41893_2022_851_Fig1_HTML.png?as=webp" />
@@ -47,34 +49,31 @@ export default function Supplementary() {
 
         {/* Paper 2 */}
         <Box>
-          <Heading as="h2" size="xl">
+          <Heading as="h2" size="lg">
             Using artificial intelligence to optimize ecological restoration for
             climate and biodiversity
           </Heading>
           <Heading as="h3" size="sm" my={6}>
             Silvestro, D., Goria, S., Groom, B., Sterner, T., and Antonelli, A.
-            (2025) bioRxiv, Open access paper:
-            <Link href="https://doi.org/10.1101/2025.01.31.635975" isExternal>
-              {" "}10.1101/2025.01.31.635975 <ExternalLinkIcon mx="2px" mt="-2px" />
-            </Link>
+            (2025) bioRxiv
           </Heading>
+          {/* Unversioned link: always the latest version of the preprint */}
+          <DownloadButton href="https://www.biorxiv.org/content/10.1101/2025.01.31.635975.full.pdf" />
         </Box>
         <Box>
           <Image src="/images/one_sim.png" />
         </Box>
 
-        {/* Paper 3 (New Addition) */}
+        {/* Paper 3 */}
         <Box>
-          <Heading as="h2" size="xl">
+          <Heading as="h2" size="lg">
             The 30 by 30 biodiversity commitment and financial disclosure: metrics matter
           </Heading>
           <Heading as="h3" size="sm" my={6}>
-            Silvestro, D., Goria, S., Groom B., Sterner T., and Antonelli, A. (2025) 
-            Current Opinion in Environmental Sustainability, Open access paper:
-            <Link href="https://doi.org/10.1016/j.cosust.2025.101587" isExternal>
-              {" "}10.1016/j.cosust.2025.101587 <ExternalLinkIcon mx="2px" mt="-2px" />
-            </Link>
+            Silvestro, D., Goria, S., Groom B., Sterner T., and Antonelli, A. (2025)
+            Current Opinion in Environmental Sustainability
           </Heading>
+          <DownloadButton href="papers/Silvestro_2025COSUST.pdf" />
         </Box>
         <Box>
           <Image src="/images/30by30.jpg"/>
@@ -82,17 +81,15 @@ export default function Supplementary() {
 
         {/* Paper 4 */}
         <Box>
-          <Heading as="h2" size="xl">
+          <Heading as="h2" size="lg">
             Reconciling top-down and bottom-up conservation priorities with
             reinforcement learning from human feedback
           </Heading>
           <Heading as="h3" size="sm" my={6}>
             Silvestro, D., Goria, S., Rau, E-P., Sterner, T., and Antonelli, A. (2026)
-            Environmental Research Letters, Open access paper:
-            <Link href="https://doi.org/10.1088/1748-9326/aea2ab" isExternal>
-              {" "}10.1088/1748-9326/aea2ab <ExternalLinkIcon mx="2px" mt="-2px" />
-            </Link>
+            Environmental Research Letters
           </Heading>
+          <DownloadButton href="https://iopscience.iop.org/article/10.1088/1748-9326/aea2ab/pdf" />
         </Box>
         <Box>
           <Image
