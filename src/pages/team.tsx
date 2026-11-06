@@ -87,6 +87,7 @@ export function getStaticProps(): { props: { team: Person[] } } {
           image: "/images/team/SG.png",
           email: "stefano@captaintech.ai",
           webpage: "https://thymia.ai/",
+          scholar: "https://scholar.google.com/citations?user=BjpQToAAAAAJ&hl=en",
           bio: `Stefano Goria has a PhD in theoretical physics and is the CTO and
             co-founder of Thymia Limited, a London-based mental health tech
             start-up.`,
