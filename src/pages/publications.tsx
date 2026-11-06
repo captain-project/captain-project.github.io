@@ -80,6 +80,27 @@ export default function Supplementary() {
           <Image src="/images/30by30.jpg"/>
         </Box>
 
+        {/* Paper 4 */}
+        <Box>
+          <Heading as="h2" size="xl">
+            Reconciling top-down and bottom-up conservation priorities with
+            reinforcement learning from human feedback
+          </Heading>
+          <Heading as="h3" size="sm" my={6}>
+            Silvestro, D., Goria, S., Rau, E-P., Sterner, T., and Antonelli, A. (2026)
+            Environmental Research Letters, Open access paper:
+            <Link href="https://doi.org/10.1088/1748-9326/aea2ab" isExternal>
+              {" "}10.1088/1748-9326/aea2ab <ExternalLinkIcon mx="2px" mt="-2px" />
+            </Link>
+          </Heading>
+        </Box>
+        <Box>
+          <Image
+            src="/images/rlhf.jpg"
+            alt="Conservation planning with reinforcement learning, refined with feedback from local communities"
+          />
+        </Box>
+
       </SimpleGrid>
 
       {/* Abstract and other content remains the same */}
